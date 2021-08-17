@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <Include href="KnownImageIds.vsct" />
+
+  <Commands package="RestartVisualStudioPackage">
+    <Groups>
+      <Group guid="RestartVisualStudioCommandSet" id="RestartCommands" priority="0x0000">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_FILE" />
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="RestartVisualStudioCommandSet" id="RestartNormalCommand" type="Button" priority="0x0001">
+        <Parent guid="RestartVisualStudioCommandSet" id="RestartCommands" />
+        <Icon guid="ImageCatalogGuid" id="VisualStudio" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>FixMenuController</CommandFlag>
+        <Strings>
+          <ButtonText>Restart Visual Studio</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="RestartVisualStudioCommandSet" id="RestartElevatedCommand" type="Button" priority="0x0001">
+        <Parent guid="RestartVisualStudioCommandSet" id="RestartCommands" />
+        <Icon guid="ImageCatalogGuid" id="VisualStudioExpressWindowsPhone" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Restart Visual Studio</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+  </Commands>
+
+
+  <Symbols>
+    <GuidSymbol name="RestartVisualStudioPackage" value="{6359DA17-6477-4E9C-8E73-7D05EA8A33A1}" />
+
+    <GuidSymbol name="RestartVisualStudioCommandSet" value="{4EAC4E23-4909-4DAC-9D6E-819BDC861480}">
+
+      <IDSymbol name="RestartGroup" value="0x0100" />
+      <IDSymbol name="RestartDropDown" value="0x0101" />
+      <IDSymbol name="RestartCommands" value="0x0102" />
+
+      <IDSymbol name="RestartNormalCommand" value="0x0105" />
+      <IDSymbol name="RestartElevatedCommand" value="0x0106" />
+    </GuidSymbol>
+
+  </Symbols>
+
+</CommandTable>
