@@ -4,4 +4,4 @@ The simplest way of restarting Visual Studio on demand (normal and elevated).
 
 # Usage
 
-![Usage Gif](/Resources/Usage.gif)
+![Usage Gif](https://raw.githubusercontent.com/pedoc/RestartVisualStudio/master/RestartVisualStudio/Resources/Usage.gif)
